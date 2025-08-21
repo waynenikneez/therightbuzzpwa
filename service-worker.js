@@ -1,11 +1,11 @@
 const CACHE_NAME = "wix-pwa-cache-v1";
-const OFFLINE_URL = "/offline.html";
+const OFFLINE_URL = "offline.html";
 
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll([
-        "/",
+        "./",
         "/index.html",
         "/manifest.json",
         OFFLINE_URL
